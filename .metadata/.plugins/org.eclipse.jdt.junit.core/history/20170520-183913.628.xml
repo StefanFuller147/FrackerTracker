@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserTests" project="FrackerTrackerJPA" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="entityTests.UserTests" time="6.438">
+    <testcase name="willPass" classname="entityTests.UserTests" time="6.308"/>
+    <testcase name="getUsername" classname="entityTests.UserTests" time="0.13"/>
+  </testsuite>
+</testrun>

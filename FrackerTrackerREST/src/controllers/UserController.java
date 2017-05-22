@@ -1,0 +1,31 @@
+package controllers;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import data.UserDAO;
+
+@RestController
+@RequestMapping("/users")
+
+
+public class UserController {
+	
+
+		@Autowired 
+		private UserDAO userDAO;
+		
+		@PersistenceContext
+		private EntityManager em;
+		
+		@RequestMapping(value = "/users/ping", method = RequestMethod.GET)
+		public String ping(){
+			return "PONG FROM USER CONTROLLER";
+		}
+
+}
