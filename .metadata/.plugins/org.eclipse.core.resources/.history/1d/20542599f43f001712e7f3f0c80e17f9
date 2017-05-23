@@ -1,0 +1,51 @@
+package data;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import entities.DrillSite;
+
+public class DrillSiteDAOImpl implements DrillSiteDAO{
+	
+	@PersistenceContext
+	private EntityManager em;
+	
+	@Autowired
+	DrillSiteDAO dsDAO;
+
+	@Override
+	public List<DrillSite> index() {
+		String q = "SELECT d FROM DrillSite d";
+		List <DrillSite> ds = em.createQuery(q, DrillSite.class).getResultList(); 
+		return ds;
+	}
+
+	@Override
+	public DrillSite show(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DrillSite update(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DrillSite create(DrillSite ds) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean remove(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

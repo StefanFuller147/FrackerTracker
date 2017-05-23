@@ -13,7 +13,7 @@
 	<!-- beans  -->
 	<bean id="userdao" class="data.UserDAOImpl"></bean>
 	<bean id="drillsitedao" class="data.DrillSiteDAOImpl"></bean>
-	<bean id="authdao" class="data.AuthDAOImpl"></bean>
+ 	<bean id="authdao" class="data.AuthDAOImpl"></bean> 
 
 	<bean id="myEntityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
@@ -29,10 +29,10 @@
 
 	<tx:annotation-driven transaction-manager="myTransactionManager" />
 	
-	 <mvc:interceptors>
+	<!--  <mvc:interceptors>
     <mvc:interceptor>
       <mvc:mapping path="/users/*/**" />
       <bean id="DataSecurityInterceptor" class="security.DataSecurityInterceptor" />
     </mvc:interceptor>
-  </mvc:interceptors>
+  </mvc:interceptors> -->
 </beans>

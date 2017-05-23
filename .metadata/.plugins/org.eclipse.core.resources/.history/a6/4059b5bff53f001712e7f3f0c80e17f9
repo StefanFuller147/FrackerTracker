@@ -1,0 +1,36 @@
+package data;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import entities.User;
+
+public class UserDAOImpl implements UserDAO{
+	@PersistenceContext
+	private EntityManager em;
+	
+	@Autowired
+	UserDAO userDAO;
+
+	@Override
+	public User create(User user) {
+		em.persist(user);
+		em.flush();
+		return user;
+	}
+
+	@Override
+	public boolean destroy(int userId) {
+		
+		return false;
+	}
+
+	@Override
+	public User update(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

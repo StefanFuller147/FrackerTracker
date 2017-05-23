@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import data.UserDAO;
 
 @RestController
-@RequestMapping("/users")
-
 
 public class UserController {
 	
@@ -27,5 +25,7 @@ public class UserController {
 		public String ping(){
 			return "PONG FROM USER CONTROLLER";
 		}
+		
+		
 
 }

@@ -1,0 +1,19 @@
+package data;
+
+import entities.User;
+
+public class UserDAOImpl implements UserDAO{
+
+	@Override
+	public User create(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean destroy(int userId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

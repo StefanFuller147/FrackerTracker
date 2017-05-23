@@ -2,26 +2,63 @@ package data;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import entities.DrillSite;
 
 public class DrillSiteDAOImpl implements DrillSiteDAO{
+	
+	@PersistenceContext
+	private EntityManager em;
+	
+	@Autowired
+	DrillSiteDAO dsDAO;
 
 	@Override
 	public List<DrillSite> index() {
-		// TODO Auto-generated method stub
-		return null;
+		String q = "SELECT d FROM DrillSite d";
+		List <DrillSite> ds = em.createQuery(q, DrillSite.class).getResultList(); 
+		return ds;
 	}
 
 	@Override
 	public DrillSite show(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		DrillSite drillSite = em.find(DrillSite.class, id);
+		return drillSite;
 	}
 
 	@Override
-	public DrillSite update(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public DrillSite update(DrillSite ds, int id) {
+		DrillSite managed = em.find(DrillSite.class, id);
+		managed.setName(ds.getName());
+		managed.setNumOfWells(ds.getNumOfWells());
+		return managed;
+	}
+
+	@Override
+	public DrillSite create(DrillSite ds) {
+	em.persist(ds);
+	em.flush();
+		return ds;
+	}
+
+	@Override
+	public boolean remove(int id) {
+		DrillSite managed = em.find(DrillSite.class, id);
+		em.remove(managed);
+		em.flush();
+		
+		if(em.find(DrillSite.class, id) == null){
+			return true;
+		}
+		
+		else if(em.find(DrillSite.class, id)!= null){
+			return false; 
+		}
+		return false;
 	}
 
 }

@@ -1,5 +1,49 @@
 package data;
 
-public class UserDAOImpl {
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import entities.User;
+
+public class UserDAOImpl implements UserDAO{
+	@PersistenceContext
+	private EntityManager em;
+	
+	@Autowired
+	UserDAO userDAO;
+
+	@Override
+	public User create(User user) {
+		em.persist(user);
+		em.flush();
+		return user;
+	}
+
+	@Override
+	public boolean destroy(int userId) {
+		User managed = em.find(User.class, userId);
+		em.persist(managed);
+		em.remove(managed);
+		em.flush();
+		
+		if(em.find(User.class,userId)==null){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}	
+
+	@Override
+	public User update(User user, int id) {
+		User managed = em.find(User.class, id);
+		managed.setEmail(user.getEmail());
+		managed.setPassword(user.getPassword());
+		managed.setUsername(user.getUsername());
+		em.flush();
+		return managed;
+	}
 
 }

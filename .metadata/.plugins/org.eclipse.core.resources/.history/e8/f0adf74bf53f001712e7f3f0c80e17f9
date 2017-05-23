@@ -1,0 +1,9 @@
+package data;
+
+import entities.User;
+
+public interface UserDAO {
+	public User create(User user);
+	public boolean destroy(int userId);
+
+}
