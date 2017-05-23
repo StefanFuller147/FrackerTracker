@@ -1,0 +1,7 @@
+angular.module('appModule', ['ngRoute', 'authModule', 'ftModule', 'navModule'])
+.config(function($routeProvider){
+	$routeProvider
+	.when('/',{
+		template : '<landing></landing>'
+	})
+})

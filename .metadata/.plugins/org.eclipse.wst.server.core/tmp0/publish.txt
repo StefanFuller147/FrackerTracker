@@ -1,5 +1,5 @@
 #Tomcat publish data
-#Tue May 23 14:49:08 MDT 2017
+#Tue May 23 15:05:53 MDT 2017
 org.eclipse.jst.j2ee.server\:FrackerTrackerREST=/Users/stefanfuller/SD/Tools/apache-tomcat-8.0.41/wtpwebapps/FrackerTrackerREST
 org.eclipse.jst.j2ee.server\:FrackerTrackerJPA=/Users/stefanfuller/SD/Tools/apache-tomcat-8.0.41/wtpwebapps/FrackerTrackerREST/WEB-INF/lib/FrackerTrackerJPA.jar
 org.eclipse.jst.j2ee.server\:/binary\:/Users/stefanfuller/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.2.RELEASE/562b3b775b6e8e7113b5d23b21946f939658bd19/spring-web-4.3.2.RELEASE.jar=/Users/stefanfuller/SD/Tools/apache-tomcat-8.0.41/wtpwebapps/FrackerTrackerREST/WEB-INF/lib/spring-web-4.3.2.RELEASE.jar
