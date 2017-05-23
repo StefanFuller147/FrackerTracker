@@ -403,3 +403,9 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-23 15:26:33.586
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-23 15:26:33.586
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

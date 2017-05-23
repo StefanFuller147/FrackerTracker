@@ -1,0 +1,6 @@
+angular.module('authModule').component('landing',{
+	templateUrl: 'app/authModule/landingPage/landing.component.html',
+	controller : function(authService, $location){
+		var vm = this;
+	}
+})
