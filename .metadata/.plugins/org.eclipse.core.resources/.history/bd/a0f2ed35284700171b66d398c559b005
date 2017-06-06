@@ -1,0 +1,17 @@
+angular.module('appModule', ['ngRoute', 'authModule', 'ftModule', 'navModule'])
+.config(function($routeProvider){
+	console.log($routeProvider)
+	$routeProvider
+	.when('/',{
+		template : '<landing></landing>'
+	})
+	.when('/register',{
+		template: '<register></register>'
+	})
+	.when('/drillsites',{
+		template:'<drillsites></drillsites>'
+	})
+//	.otherise({
+//		template: '<not-found-component></not-found-component>'
+//	})
+})

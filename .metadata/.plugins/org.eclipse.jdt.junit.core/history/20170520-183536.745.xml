@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DrillSiteTests" project="FrackerTrackerJPA" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="entityTests.DrillSiteTests" time="6.367">
-    <testcase name="getDrillSite" classname="entityTests.DrillSiteTests" time="6.292"/>
-    <testcase name="test" classname="entityTests.DrillSiteTests" time="0.075"/>
-  </testsuite>
-</testrun>

@@ -1,0 +1,23 @@
+
+<div class="login-box" id="logIn">
+
+	<div class="username">
+		<form class ="username">
+			<label class="button"><b>Username</b></label> 
+			<input type="text" class="input-box" 
+			placeHolder="Username" ng-model="user.username" required /> 
+			<label><b>Password</b></label>
+			<input type="password" placeHolder="Password" class="input-box"
+				ng-model="user.password" required /> 
+				
+				<!-- <input type="checkbox" id="label" checked="checked"> Remember me 
+				<span class="psw">Forgot<a href="#">password?</a>
+				</span> -->
+			<hr>
+			<div>
+				<button type="button" ng-click="vm.login(user)">Sign In</button>
+				<button type="submit" class="button" ng-click="vm.cancel()">Cancel</button>
+			</div>
+		</form>
+	</div>
+</div>
